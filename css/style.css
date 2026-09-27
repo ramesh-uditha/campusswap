@@ -1,0 +1,350 @@
+/* ==========================================================================
+   CampusSwap - Campus Thrift & Item Exchange
+   Modern Eco-Friendly Theme (Emerald & Teal)
+   Course: ICT 2209 Web Technologies Mini Project
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* CampusSwap Color System */
+  --primary-emerald: #059669;
+  --primary-hover: #047857;
+  --secondary-teal: #0d9488;
+  --accent-mint: #10b981;
+  --accent-amber: #f59e0b;
+  --dark-slate: #0f172a;
+  --muted-gray: #64748b;
+  --light-surface: #f8fafc;
+  --card-background: #ffffff;
+  --border-subtle: #e2e8f0;
+  --eco-badge-bg: #d1fae5;
+  --eco-badge-text: #065f46;
+
+  /* Shadows and Effects */
+  --shadow-soft: 0 4px 14px 0 rgba(5, 150, 105, 0.08);
+  --shadow-lift: 0 12px 24px -4px rgba(5, 150, 105, 0.16), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --glass-nav: rgba(255, 255, 255, 0.92);
+  --radius-xl: 20px;
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--light-surface);
+  color: var(--dark-slate);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+}
+
+/* --- Brand Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--dark-slate);
+}
+
+.text-emerald-gradient {
+  background: linear-gradient(135deg, var(--primary-emerald) 0%, var(--secondary-teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Navigation Bar --- */
+.navbar-campusswap {
+  background: var(--glass-nav);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(5, 150, 105, 0.12);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease-in-out;
+  padding: 0.85rem 0;
+}
+
+.navbar-brand-swap {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--dark-slate) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-icon-box {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary-emerald), var(--secondary-teal));
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
+}
+
+.nav-link-custom {
+  font-weight: 600;
+  color: var(--muted-gray) !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.nav-link-custom:hover, .nav-link-custom.active {
+  color: var(--primary-emerald) !important;
+  background-color: rgba(5, 150, 105, 0.08);
+}
+
+/* --- Hero Banner --- */
+.hero-swap-section {
+  background: radial-gradient(circle at top right, rgba(13, 148, 136, 0.15), transparent 45%),
+              linear-gradient(135deg, #064e3b 0%, #065f46 45%, #047857 100%);
+  color: #ffffff;
+  padding: 90px 0 75px;
+  position: relative;
+  border-radius: 0 0 36px 36px;
+  overflow: hidden;
+}
+
+.hero-swap-section h1 {
+  color: #ffffff;
+  font-size: 2.85rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero-highlight-badge {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  color: #a7f3d0;
+  padding: 0.4rem 1.1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* --- Eco Stat Cards --- */
+.stat-pill {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+}
+
+.stat-pill .number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #6ee7b7;
+}
+
+.stat-pill .label {
+  font-size: 0.8rem;
+  color: #e2e8f0;
+}
+
+/* --- Buttons --- */
+.btn-emerald {
+  background: linear-gradient(135deg, var(--primary-emerald), var(--primary-hover));
+  color: #ffffff !important;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.65rem 1.5rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+}
+
+.btn-emerald:hover {
+  background: linear-gradient(135deg, var(--primary-hover), #064e3b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.35);
+}
+
+.btn-outline-emerald {
+  border: 2px solid var(--primary-emerald);
+  color: var(--primary-emerald) !important;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  padding: 0.6rem 1.4rem;
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-emerald:hover {
+  background: var(--primary-emerald);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* --- Product Cards --- */
+.swap-card {
+  background: var(--card-background);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.swap-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lift);
+  border-color: rgba(5, 150, 105, 0.3);
+}
+
+.swap-card-img-wrap {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.swap-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.swap-card:hover .swap-card-img-wrap img {
+  transform: scale(1.06);
+}
+
+.swap-condition-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.swap-price-pill {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(15, 23, 42, 0.88);
+  color: #34d399;
+  font-size: 1.05rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+}
+
+.swap-card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* --- Category Filter Buttons --- */
+.category-filter-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  color: var(--muted-gray);
+  border-radius: 50px;
+  padding: 0.45rem 1.15rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.category-filter-btn:hover,
+.category-filter-btn.active {
+  background: var(--primary-emerald);
+  color: #ffffff;
+  border-color: var(--primary-emerald);
+  box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);
+}
+
+/* --- Authentication Card --- */
+.auth-box {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 20px 40px -15px rgba(5, 150, 105, 0.12);
+  padding: 2.5rem;
+}
+
+/* --- Dashboard Specific Styles --- */
+.dashboard-stat-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  transition: all 0.25s ease;
+}
+
+.dashboard-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* --- Footer --- */
+.footer-swap {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 55px 0 25px;
+  margin-top: auto;
+  border-top: 3px solid var(--primary-emerald);
+}
+
+.footer-swap h5 {
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.footer-link {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #34d399;
+}
+
+.bg-teal {
+  background-color: var(--secondary-teal) !important;
+}
